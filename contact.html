@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="/bites pos/images assets/Faviconbites.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/bites pos/images assets/Faviconbites.png"
+    />
+    <title>Contact Us - Bites POS</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="index.html"
+          >Bites<span class="text-primary">POS</span></a
+        > -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="/bites pos/images assets/BitesPos logo.png"
+            alt="BitesPOS Logo"
+            style="height: 40px; width: auto"
+            class="me-2"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-primary" href="contact.html">Get Started</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Prebook Section  -->
+    <section class="page-header bg-primary text-white py-5">
+      <div class="container text-center">
+        <h2 class="display-3 fw-bold mb-3">Prebook Your Bites POS</h2>
+        <p class="lead mx-auto" style="max-width: 700px">
+          Secure your Bites POS today with a refundable deposit of just $200. Be
+          among the first to revolutionize your restaurant operations.
+        </p>
+        <div class="mt-4">
+          <a
+            href="https://buy.stripe.com/bIYg2p24NaeT20o288?client_reference_id=BitesPos"
+            class="btn btn-lg btn-light text-primary fw-bold shadow-lg"
+          >
+            Prebook Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 fw-bold mb-4">Contact Us</h1>
+            <p class="lead text-secondary mb-4">
+              Have questions about Bites POS? We're here to help you get
+              started.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5 py-md-7">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="display-6 fw-bold mb-4">Get in Touch</h2>
+            <p class="lead mb-5">
+              Fill out the form and one of our team members will get back to you
+              within 24 hours.
+            </p>
+
+            <form id="contactForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide your first name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide your last name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid email address.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" />
+                </div>
+                <div class="col-12">
+                  <label for="restaurantName" class="form-label"
+                    >Restaurant Name</label
+                  >
+                  <input type="text" class="form-control" id="restaurantName" />
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select class="form-select" id="subject" required>
+                    <option value="" selected disabled>Select a subject</option>
+                    <option value="sales">Sales Inquiry</option>
+                    <option value="demo">Request a Demo</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a subject.</div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="termsCheck"
+                      required
+                    />
+                    <label class="form-check-label" for="termsCheck">
+                      I agree to the
+                      <a href="#" class="text-primary">privacy policy</a> and
+                      <a href="#" class="text-primary">terms of service</a>.
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Submit Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="bg-light p-4 p-lg-5 rounded-4 h-100">
+              <h3 class="h4 mb-4">Contact Information</h3>
+              <div class="d-flex mb-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary-subtle rounded-circle p-3">
+                    <i class="bi bi-geo-alt text-primary"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h5 mb-1">Our Location</h4>
+                  <p class="text-secondary mb-0">
+                    100-2.011 & 2.013, 129 Offices, Block J, Jaya One, Jln
+                    Profesor Diraja Ungku Aziz, Seksyen 13, 46200 Petaling Jaya,
+                    Selangor, Malaysia
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary-subtle rounded-circle p-3">
+                    <i class="bi bi-telephone text-primary"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h5 mb-1">Phone Number</h4>
+                  <p class="text-secondary mb-0">+60 183692661</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary-subtle rounded-circle p-3">
+                    <i class="bi bi-envelope text-primary"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h5 mb-1">Email Address</h4>
+                  <p class="text-secondary mb-0">info@bitespos.com</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary-subtle rounded-circle p-3">
+                    <i class="bi bi-clock text-primary"></i>
+                  </div>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h5 mb-1">Business Hours</h4>
+                  <p class="text-secondary mb-0">
+                    Monday - Friday: 9:00 AM - 5:00 PM<br />Saturday - Sunday:
+                    Closed
+                  </p>
+                </div>
+              </div>
+
+              <hr class="my-5" />
+
+              <h3 class="h4 mb-4">Follow Us</h3>
+              <div class="d-flex gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61575014166032"
+                  class="btn btn-outline-primary rounded-circle"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/bitespos"
+                  class="btn btn-outline-primary rounded-circle"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <!-- <a href="#" class="btn btn-outline-primary rounded-circle">
+                  <i class="bi bi-twitter"></i>
+                </a> -->
+                <!-- <a href="#" class="btn btn-outline-primary rounded-circle">
+                  <i class="bi bi-linkedin"></i>
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 py-md-7 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold mb-3">Find Us</h2>
+          <p class="lead text-secondary mx-auto" style="max-width: 700px">
+            Visit our office to see Bites POS in action and meet our team.
+          </p>
+        </div>
+
+        <div class="ratio ratio-21x9 overflow-hidden rounded-4 shadow">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.911019004187!2d101.63526739999999!3d3.1182377999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc498695996703%3A0x3d31cdf97d1e8380!2sFood%20Market%20Hub!5e0!3m2!1sen!2sin!4v1743491342450!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 py-md-7">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold mb-3">Frequently Asked Questions</h2>
+          <p class="lead text-secondary mx-auto" style="max-width: 700px">
+            Find quick answers to common questions about getting started with
+            Bites POS.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    How soon can I get set up with Bites POS?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Most restaurants are up and running with Bites POS within
+                    1-2 weeks of initial contact. The exact timeline depends on
+                    your restaurant's specific needs and configuration
+                    requirements.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Can I request a demo before purchasing?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Absolutely! We encourage potential customers to see Bites
+                    POS in action before making a decision. You can request a
+                    demo through our contact form, and one of our team members
+                    will schedule a personalized demonstration.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    What payment methods do you accept?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    We accept all major credit cards, bank transfers, and
+                    checks. We can also work with you to establish a payment
+                    plan if needed.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 shadow-sm">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    How do I get technical support after installation?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Our technical support team is available via phone, email,
+                    and live chat. All customers receive our support contact
+                    information during the setup process, and our team is
+                    dedicated to resolving any issues promptly.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 py-md-7 bg-light">
+      <div class="container">
+        <div
+          class="bg-primary text-white rounded-4 p-5 p-md-6 position-relative overflow-hidden"
+        >
+          <div class="position-relative z-1 text-center">
+            <h2 class="display-5 fw-bold mb-3">Ready to Get Started?</h2>
+            <p class="lead mb-4 mx-auto" style="max-width: 700px">
+              Transform your restaurant operations with Bites POS today. One
+              payment, lifetime value.
+            </p>
+            <div
+              class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+            >
+              <a href="pricing.html" class="btn btn-light btn-lg"
+                >View Pricing</a
+              >
+              <a href="#contactForm" class="btn btn-outline-light btn-lg"
+                >Contact Us Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-3">Bites<span class="text-primary">POS</span></h5>
+            <p>
+              The complete restaurant point of sale system with a one-time setup
+              cost and lifetime free usage.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="https://www.facebook.com/profile.php?id=61575014166032"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/bitespos"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <!-- <a href="#"><i class="bi bi-twitter"></i></a> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-3">Quick Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link p-0 mb-2">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="features.html" class="nav-link p-0 mb-2">Features</a>
+              </li>
+              <li class="nav-item">
+                <a href="pricing.html" class="nav-link p-0 mb-2">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link p-0 mb-2">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link p-0 mb-2">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-3">Resources</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="http://blog.bitespos.ai/" class="nav-link p-0 mb-2"
+                  >Blog</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link p-0 mb-2">Support</a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link p-0 mb-2">Documentation</a>
+              </li> -->
+              <li class="nav-item">
+                <a href="privacy-policy.html" class="nav-link p-0 mb-2"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="terms-of-usage.html" class="nav-link p-0 mb-2"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="mb-3">Contact Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item d-flex mb-3">
+                <i class="bi bi-geo-alt text-primary me-2"></i>
+                <span
+                  >100-2.011 & 2.013, 129 Offices, Block J, Jaya One, Jln
+                  Profesor Diraja Ungku Aziz, Seksyen 13, 46200 Petaling Jaya,
+                  Selangor, Malaysia</span
+                >
+              </li>
+              <li class="nav-item d-flex mb-3">
+                <i class="bi bi-telephone text-primary me-2"></i>
+                <span>+60 183692661</span>
+              </li>
+              <li class="nav-item d-flex mb-3">
+                <i class="bi bi-envelope text-primary me-2"></i>
+                <span>info@bitespos.ai</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 100-2.011 & 2.013, 129 Offices (Block J, Jaya One, Jln Profesor Diraja Ungku Aziz, Seksyen 13, 46200 Petaling Jaya, Selangor, Malaysia -->
+        <div
+          class="border-top border-secondary pt-4 mt-4 text-center text-muted"
+        >
+          <p>
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Bites POS. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Form validation script -->
+    <!-- <script>
+    // Form validation
+    (function() {
+      'use strict';
+      
+      // Fetch all forms that need validation
+      var forms = document.querySelectorAll('.needs-validation');
+      
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            event.preventDefault();
+            
+            // Show success message
+            form.innerHTML = '<div class="alert alert-success" role="alert"><h4 class="alert-heading">Message Sent!</h4><p>Thank you for contacting us. We\'ll get back to you within 24 hours.</p></div>';
+            
+            // Scroll to the success message
+            form.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script> -->
+    <!-- form submission script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const formData = {
+              firstName: document.getElementById("firstName")?.value || "",
+              lastName: document.getElementById("lastName")?.value || "",
+              email: document.getElementById("email")?.value || "",
+              phone: document.getElementById("phone")?.value || "",
+              restaurantName:
+                document.getElementById("restaurantName")?.value || "",
+              subject: document.getElementById("subject")?.value || "",
+              message: document.getElementById("message")?.value || "",
+            };
+
+            // Log values to the console for debugging
+            console.log("Captured Form Data:", formData);
+
+            // Validate required fields
+            if (!formData.email.trim()) {
+              alert("Please enter a valid email address yar.");
+              return;
+            }
+            if (!formData.phone.trim()) {
+              alert("Please enter your phone number babes.");
+              return;
+            }
+
+            // Send data to Google Apps Script
+            const response = await fetch(
+              "https://script.google.com/macros/s/AKfycbzO3rQSBTjXiuhhWIF1O340Z2eLxFENyXDkyQcbT8YcPxoAtimQBB_JLfz61wW8sDuhCQ/exec",
+              {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+              }
+            );
+
+            // Show success message (optional)
+            alert("Your message has been sent successfully!");
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+          });
+      });
+    </script>
+  </body>
+</html>
