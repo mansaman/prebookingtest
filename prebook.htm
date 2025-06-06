@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneTimePOS - The Last POS You'll Ever Buy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        
+        .cta-glow {
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-glow:hover {
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #3498db 0%, #2a8bf2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .early-bird-badge {
+            animation: pulse 2s infinite;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            margin-right: 8px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Form message styles */
+        .success-message {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        .error-message {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        /* Countdown animation */
+        .countdown-box .changing {
+            transform: scale(1.1);
+            color: #1d4ed8;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-gradient py-5">
+        <div class="container text-center py-4">
+            <div class="d-inline-flex align-items-center px-3 py-1 rounded-pill bg-white text-primary mb-4 shadow-sm">
+                <span class="early-bird-badge"></span>
+                Early Access Now Open
+            </div>
+            <h1 class="display-4 fw-bold text-dark mb-4">
+                The <span class="text-primary">Subscription-Free</span> POS Revolution Is Coming
+            </h1>
+            <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">
+                Pay once. Own forever. No monthly fees. No hidden charges. Just powerful POS software designed to grow with your business.
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div class="bg-white rounded-3 p-4 shadow mb-5 mx-auto" style="max-width: 500px;">
+                <h3 class="h5 fw-semibold text-dark mb-3">Launching in:</h3>
+                <div class="row g-2">
+                    <div class="col-3">
+                        <div class="countdown-box rounded-2 p-2 text-center">
+                            <div class="fs-2 fw-bold text-primary" id="days">00</div>
+                            <div class="small text-uppercase text-muted">Days</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="countdown-box rounded-2 p-2 text-center">
+                            <div class="fs-2 fw-bold text-primary" id="hours">00</div>
+                            <div class="small text-uppercase text-muted">Hours</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="countdown-box rounded-2 p-2 text-center">
+                            <div class="fs-2 fw-bold text-primary" id="minutes">00</div>
+                            <div class="small text-uppercase text-muted">Minutes</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="countdown-box rounded-2 p-2 text-center">
+                            <div class="fs-2 fw-bold text-primary" id="seconds">00</div>
+                            <div class="small text-uppercase text-muted">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Early Access CTA -->
+            <div class="bg-white rounded-3 shadow-lg overflow-hidden mx-auto" style="max-width: 600px;">
+                <div class="p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h3 class="h2 fw-bold text-dark mb-2">Join the Waitlist Today</h3>
+                        <p class="text-muted">Limited spots available for early adopters</p>
+                    </div>
+                    
+                    <form id="waitlistForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" id="email" name="email" required placeholder="Your business email">
+                            <div class="invalid-feedback">Please provide a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="business" name="business" required placeholder="Your business name">
+                            <div class="invalid-feedback">Please provide your business name.</div>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="exclusive-offer" name="exclusive-offer">
+                            <label class="form-check-label" for="exclusive-offer">
+                                I want exclusive early bird pricing
+                            </label>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-100 cta-glow py-3">
+                            <i class="fas fa-lock-open me-2"></i> Secure My Early Access
+                        </button>
+                        <p class="small text-muted mt-3 text-center">
+                            <i class="fas fa-shield-alt me-1"></i> No payment required now. We'll notify you when we're ready.
+                        </p>
+                    </form>
+                    <div id="formMessage" class="d-none mt-3 p-3 rounded text-sm text-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Why Business Owners Love OneTimePOS</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">A POS system that puts money back in your pocket</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-money-bill-wave fa-3x"></i>
+                            </div>
+                            <h3 class="h4">Pay Once, Own Forever</h3>
+                            <p class="text-muted">No recurring fees. One affordable payment and it's yours for life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-chart-line fa-3x"></i>
+                            </div>
+                            <h3 class="h4">Powerful Analytics</h3>
+                            <p class="text-muted">Make data-driven decisions with our comprehensive reporting tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-sync-alt fa-3x"></i>
+                            </div>
+                            <h3 class="h4">Free Lifetime Updates</h3>
+                            <p class="text-muted">We keep improving the software and you get all updates at no extra cost.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">What Early Adopters Are Saying</h2>
+                    <p class="lead text-muted">Don't just take our word for it. Here's what business owners in our beta program have to say.</p>
+                    <button class="btn btn-outline-primary mt-3">View More Testimonials</button>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle me-3" width="60" alt="Testimonial">
+                                <div>
+                                    <h5 class="mb-0">Sarah Johnson</h5>
+                                    <p class="text-muted mb-0">Owner, Fresh Café</p>
+                                </div>
+                            </div>
+                            <p class="lead mb-0">"After paying $100/month for years with my old POS, switching to OneTimePOS saved me $1,200 in the first year alone. The software is even better than what I was paying monthly for!"</p>
+                            <div class="text-warning mt-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about OneTimePOS</p>
+            </div>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item border-0 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                            How is this different from other POS systems?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Most POS systems charge monthly subscription fees that add up to thousands over time. OneTimePOS is a one-time purchase with no hidden fees. You own the software forever and get free updates.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                            What hardware do I need?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            OneTimePOS works with most standard POS hardware including receipt printers, barcode scanners, and cash drawers. We'll provide a compatibility list at launch. Many businesses can use their existing hardware.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                            Is there any ongoing cost?
+                        </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The only ongoing cost would be payment processing fees if you choose to use our integrated payment processing (which is optional). The POS software itself has no recurring fees.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                            When will the software be available?
+                        </button>
+                    </h2>
+                    <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We're launching to our waitlist members on the date shown in our countdown timer. Join the waitlist now to get early access and special pricing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center py-4">
+            <h2 class="display-5 fw-bold mb-4">Ready to Ditch Monthly POS Fees?</h2>
+            <p class="lead mb-5 mx-auto" style="max-width: 700px;">Join hundreds of business owners who are saving thousands with OneTimePOS</p>
+            <a href="#waitlistForm" class="btn btn-light btn-lg px-5 py-3 fw-bold cta-glow">
+                <i class="fas fa-lock-open me-2"></i> Get Early Access Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2023 OneTimePOS. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set launch date to next month's first day at 9:00 AM
+            const now = new Date();
+            const countDownDate = new Date();
+            countDownDate.setMonth(now.getMonth() + 1);
+            countDownDate.setDate(1);
+            countDownDate.setHours(9, 0, 0, 0);
+
+            // Smooth countdown timer with animations
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+                
+                // Calculate time units
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Get elements
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minsEl = document.getElementById("minutes");
+                const secsEl = document.getElementById("seconds");
+                
+                // Animate changes
+                if (daysEl.textContent !== days.toString().padStart(2, '0')) {
+                    daysEl.classList.add('changing');
+                    setTimeout(() => {
+                        daysEl.textContent = days.toString().padStart(2, '0');
+                        daysEl.classList.remove('changing');
+                    }, 150);
+                }
+                
+                if (hoursEl.textContent !== hours.toString().padStart(2, '0')) {
+                    hoursEl.classList.add('changing');
+                    setTimeout(() => {
+                        hoursEl.textContent = hours.toString().padStart(2, '0');
+                        hoursEl.classList.remove('changing');
+                    }, 150);
+                }
+                
+                if (minsEl.textContent !== minutes.toString().padStart(2, '0')) {
+                    minsEl.classList.add('changing');
+                    setTimeout(() => {
+                        minsEl.textContent = minutes.toString().padStart(2, '0');
+                        minsEl.classList.remove('changing');
+                    }, 150);
+                }
+                
+                // Always update seconds with animation
+                secsEl.classList.add('changing');
+                setTimeout(() => {
+                    secsEl.textContent = seconds.toString().padStart(2, '0');
+                    secsEl.classList.remove('changing');
+                }, 150);
+                
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.querySelectorAll('.countdown-box div:first-child').forEach(el => {
+                        el.textContent = "00";
+                        el.classList.add('text-success');
+                    });
+                }
+            }
+
+            // Update immediately and then every second
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+            // Form submission to Google Sheets
+            const form = document.getElementById('waitlistForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+
+            // Bootstrap form validation
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!form.checkValidity()) {
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+                
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing...';
+                submitBtn.disabled = true;
+                
+                // Get form data
+                const formData = new FormData(form);
+                const data = {
+                    email: formData.get('email'),
+                    business: formData.get('business'),
+                    wantsOffer: formData.get('exclusive-offer') ? 'Yes' : 'No',
+                    timestamp: new Date().toLocaleString()
+                };
+                
+                // IMPORTANT: Replace this with your actual Google Apps Script URL
+                const scriptURL = 'https://script.google.com/macros/s/1RXty2gxC7s4zczOrlXbgNvJ2msYQDfG5hjACgLb1oZQ/exec';;
+                
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Show success message
+                    formMessage.textContent = 'Thank you! You have been added to our waitlist.';
+                    formMessage.className = 'success-message';
+                    formMessage.classList.remove('d-none');
+                    
+                    // Reset form
+                    form.reset();
+                    form.classList.remove('was-validated');
+                })
+                .catch(error => {
+                    // Show error message
+                    formMessage.textContent = 'There was an error. Please try again or contact us.';
+                    formMessage.className = 'error-message';
+                    formMessage.classList.remove('d-none');
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.classList.add('d-none');
+                    }, 5000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

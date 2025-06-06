@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneTimePOS - The Last POS You'll Ever Buy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        .cta-glow {
+            box-shadow: 0 4px 15px rgba(56, 182, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-glow:hover {
+            box-shadow: 0 6px 20px rgba(56, 182, 255, 0.6);
+            transform: translateY(-2px);
+        }
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #38b6ff 0%, #2a8bf2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .early-bird-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white text-blue-600 font-medium mb-6 shadow-sm">
+                <span class="early-bird-badge inline-block h-2 w-2 rounded-full bg-yellow-400 mr-2"></span>
+                Early Access Now Open
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                The <span class="text-blue-500">Subscription-Free</span> POS Revolution Is Coming
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+                Pay once. Own forever. No monthly fees. No hidden charges. Just powerful POS software designed to grow with your business.
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div class="max-w-md mx-auto bg-white rounded-xl p-6 shadow-lg mb-12">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Launching in:</h3>
+                <div class="grid grid-cols-4 gap-3">
+                    <div class="countdown-box rounded-lg p-3 text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="days">00</div>
+                        <div class="text-xs uppercase text-gray-500">Days</div>
+                    </div>
+                    <div class="countdown-box rounded-lg p-3 text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="hours">00</div>
+                        <div class="text-xs uppercase text-gray-500">Hours</div>
+                    </div>
+                    <div class="countdown-box rounded-lg p-3 text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="minutes">00</div>
+                        <div class="text-xs uppercase text-gray-500">Minutes</div>
+                    </div>
+                    <div class="countdown-box rounded-lg p-3 text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="seconds">00</div>
+                        <div class="text-xs uppercase text-gray-500">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Early Access CTA -->
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-8 sm:p-10">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist Today</h3>
+                        <p class="text-gray-600">Limited spots available for early adopters</p>
+                    </div>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <input type="email" placeholder="Your business email" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Your business name" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="flex items-center">
+                            <input id="exclusive-offer" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <label for="exclusive-offer" class="ml-2 text-sm text-gray-700">
+                                I want exclusive early bird pricing
+                            </label>
+                        </div>
+                        <button type="button" class="w-full cta-glow bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-lock-open mr-2"></i> Secure My Early Access
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            <i class="fas fa-shield-alt mr-1"></i> No payment required now. We'll notify you when we're ready.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Why Join Early?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Exclusive Pricing</h3>
+                    <p class="text-gray-600">
+                        Early adopters will receive special one-time pricing that won't be available after launch.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Bonus Features</h3>
+                    <p class="text-gray-600">
+                        Get free access to premium features that will be paid add-ons after launch.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Priority Support</h3>
+                    <p class="text-gray-600">
+                        Dedicated onboarding and premium support to ensure smooth setup.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial/Trust Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Businesses Are Ready for Change</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm mb-10">
+                <div class="text-blue-500 text-5xl mb-4">"</div>
+                <p class="text-xl text-gray-700 italic mb-6">
+                    We're tired of monthly POS subscriptions that nickel and dime us. A one-time payment for lifetime access is exactly what our business needs.
+                </p>
+                <div class="font-medium text-gray-900">— Sarah K., Retail Store Owner</div>
+            </div>
+            
+            <button class="cta-glow bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                <i class="fas fa-rocket mr-2"></i> Join the Waitlist Now
+            </button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-900">How does the one-time payment work?</span>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600">
+                        You pay a single, upfront fee for the software license. This gives you lifetime access to the current version and all its features. Future major version upgrades may be offered at a discounted rate, but you're never required to upgrade.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-900">What are the benefits of joining early?</span>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600">
+                        Early adopters will receive: (1) Special launch pricing that won't be available later, (2) Free access to premium features that will be paid add-ons after launch, (3) Priority support and onboarding, and (4) The ability to influence final product development.
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 hover:bg-gray-50 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium text-gray-900">Is there any commitment to join the waitlist?</span>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600">
+                        No commitment at all! Joining the waitlist simply reserves your spot for early access. We'll notify you when we're ready to launch and you can decide then if you want to proceed. No payment information is required to join the waitlist.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 to-blue-600">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl font-bold mb-6">Ready to Break Free From Monthly POS Fees?</h2>
+            <p class="text-xl mb-8 opacity-90">Join hundreds of businesses who are saying goodbye to subscription POS systems.</p>
+            <button class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition duration-300 inline-flex items-center shadow-lg">
+                <i class="fas fa-calendar-check mr-2"></i> Reserve Your Early Access Now
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer (set to 45 days from now)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 45);
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+
+        // Form submission effect
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Secure My Early Access') || 
+                button.textContent.includes('Join the Waitlist Now') || 
+                button.textContent.includes('Reserve Your Early Access')) {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-check mr-2"></i> Success!';
+                        this.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                        this.classList.add('bg-green-500', 'hover:bg-green-600');
+                        
+                        // Show confirmation message
+                        const confirmation = document.createElement('div');
+                        confirmation.className = 'mt-4 p-3 bg-white bg-opacity-20 rounded text-sm';
+                        confirmation.innerHTML = 'Thank you! We\'ll be in touch soon with early access details.';
+                        this.parentNode.appendChild(confirmation);
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.classList.remove('bg-green-500', 'hover:bg-green-600');
+                            this.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                            this.disabled = false;
+                            confirmation.remove();
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
