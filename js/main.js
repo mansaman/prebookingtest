@@ -96,76 +96,108 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// countdown
+function startCountdown24hr() {
+  const countdownHours = document.getElementById('countdown-hours');
+  const countdownMinutes = document.getElementById('countdown-minutes');
+  const countdownSeconds = document.getElementById('countdown-seconds');
 
+  // If any element is missing, stop
+  if (!countdownHours || !countdownMinutes || !countdownSeconds) return;
 
+  const STORAGE_KEY = 'bitesposCountdownStart';
 
-
-
- // Countdown timer (7 days from now)
- function updateCountdown() {
-    const now = new Date();
-    const endDate = new Date();
-    endDate.setDate(now.getDate() + 7);
-    
-    const diff = endDate - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    
-    document.getElementById('countdown-days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+  // Get or set initial start time
+  let startTime = localStorage.getItem(STORAGE_KEY);
+  if (!startTime) {
+    startTime = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, startTime);
   }
-  
+
+  function updateCountdown() {
+    const now = new Date();
+    const startedAt = new Date(localStorage.getItem(STORAGE_KEY));
+    const elapsed = now - startedAt;
+
+    const fullCycle = 24 * 60 * 60 * 1000; // 24 hours in ms
+    const remaining = fullCycle - (elapsed % fullCycle); // reset if over
+
+    const hours = Math.floor(remaining / (1000 * 60 * 60));
+    const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+    countdownHours.textContent = String(hours).padStart(2, '0');
+    countdownMinutes.textContent = String(minutes).padStart(2, '0');
+    countdownSeconds.textContent = String(seconds).padStart(2, '0');
+  }
+
   updateCountdown();
-  setInterval(updateCountdown, 60000);
-  
-  // Form validation
-  (function() {
-    'use strict';
-    const form = document.getElementById('prebookForm');
-    form.addEventListener('submit', function(event) {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  })();
+  setInterval(updateCountdown, 1000);
+}
+
+// Call it on DOM load
+document.addEventListener('DOMContentLoaded', function () {
+  startCountdown24hr();
+});
 
 
 
+// prebookin
+document.getElementById('prebookForm')?.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = this;
 
+  if (!form.checkValidity()) {
+    form.classList.add('was-validated');
+    return;
+  }
 
-  
-  // Micro-interactions
-  document.querySelectorAll('.form-group input').forEach(input => {
-    input.addEventListener('focus', function() {
-      this.parentNode.querySelector('.underline').style.width = '100%';
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
+
+  // Loading state
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `
+    <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+    Processing...
+  `;
+
+  const formData = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    restaurant: document.getElementById('restaurant').value.trim(),
+    timestamp: new Date().toISOString()
+  };
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyR0hd69Sy_ukosvGbX_88Hb76EN8xUl758sUMAxIbsgoSCG5l7zdySbEmiFVn1OkAs/exec';
+
+  try {
+    await fetch(scriptURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      mode: 'no-cors',
+      body: JSON.stringify(formData)
     });
-    
-    input.addEventListener('blur', function() {
-      if (!this.value) {
-        this.parentNode.querySelector('.underline').style.width = '0';
-      }
-    });
-  });
-  
-  // Animate benefit items on scroll
-  const benefitItems = document.querySelectorAll('.benefit-item');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateX(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  benefitItems.forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateX(20px)';
-    item.style.transition = `opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.1}s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.1}s`;
-    observer.observe(item);
-  });
+
+    form.innerHTML = `
+      <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        Thank you! Your prebooking has been received.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    `;
+  } catch (error) {
+    console.error('Submission error:', error);
+    form.insertAdjacentHTML('beforeend', `
+      <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        Submission failed: ${error.message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    `);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+  }
+});

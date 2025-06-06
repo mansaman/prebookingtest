@@ -12,6 +12,8 @@
       rel="apple-touch-icon"
       href="/bites pos/images assets/Faviconbites.png"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 
     <title>Bites POS - Restaurant Management System</title>
     <!-- Bootstrap CSS -->
@@ -26,6 +28,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- prebooking  -->
+     
   </head>
   <body>
     <!-- Navigation -->
@@ -182,7 +187,7 @@
         </p>
         <div class="mt-4">
           <a
-            href="https://buy.stripe.com/bIYg2p24NaeT20o288?client_reference_id=BitesPos"
+            href="prebooking/"
             class="btn btn-lg btn-light text-primary fw-bold shadow-lg"
           >
             Prebook Now
@@ -396,91 +401,10 @@
 
 
 
-
-
-<!-- Prebooking Section -->
-<section class="py-5 py-md-7 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="pe-lg-5">
-          <span class="badge bg-primary-subtle text-primary mb-3">Limited Time Offer</span>
-          <h2 class="display-5 fw-bold mb-4">Prebook Now & Get Exclusive Benefits</h2>
-          <ul class="list-unstyled mb-5">
-            <li class="d-flex mb-3">
-              <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                <i class="bi bi-check-lg text-primary"></i>
-              </div>
-              <div class="ms-3">
-                <h5 class="mb-0">Priority Installation</h5>
-                <p class="text-secondary mb-0">Be first in line for setup when we launch</p>
-              </div>
-            </li>
-            <li class="d-flex mb-3">
-              <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                <i class="bi bi-check-lg text-primary"></i>
-              </div>
-              <div class="ms-3">
-                <h5 class="mb-0">RM500 Setup Discount</h5>
-                <p class="text-secondary mb-0">Special price for early adopters</p>
-              </div>
-            </li>
-            <li class="d-flex">
-              <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                <i class="bi bi-check-lg text-primary"></i>
-              </div>
-              <div class="ms-3">
-                <h5 class="mb-0">Free Training Session</h5>
-                <p class="text-secondary mb-0">Personalized onboarding for your team</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="h3 mb-4 text-center">Reserve Your Spot Today</h3>
-            <form id="prebookForm">
-              <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="+60 12 345 6789" required>
-              </div>
-              <div class="mb-4">
-                <label for="restaurant" class="form-label">Restaurant Name</label>
-                <input type="text" class="form-control" id="restaurant" placeholder="Your restaurant name">
-              </div>
-              <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">
-                Prebook for RM2,000 (Refundable)
-              </button>
-              <p class="small text-center text-muted mt-3 mb-0">
-                No risk - 100% refundable deposit. Secure your spot now!
-              </p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
 <!-- Enhanced Prebooking Section with Early Bird Offer -->
-<section class="py-5 py-md-7 bg-light position-relative overflow-hidden">
+<!-- <section class="py-5 py-md-7 bg-light position-relative overflow-hidden"> -->
   <!-- Decorative elements -->
-  <div class="position-absolute top-0 end-0 w-100 h-100 bg-primary-opacity-10" style="clip-path: polygon(100% 0, 100% 100%, 0 100%); z-index: 0;"></div>
+  <!-- <div class="position-absolute top-0 end-0 w-100 h-100 bg-primary-opacity-10" style="clip-path: polygon(100% 0, 100% 100%, 0 100%); z-index: 0;"></div>
   <div class="position-absolute start-0 bottom-0" style="z-index: 0;">
     <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="100" cy="100" r="98" stroke="var(--primary)" stroke-width="2" stroke-dasharray="8 8"/>
@@ -643,629 +567,175 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
 
-<!-- Compact Prebooking Section -->
-<section class="py-5 bg-primary-light">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-5">
-        <span class="badge bg-warning text-dark mb-3">⏰ EARLY BIRD OFFER</span>
-        <h2 class="h3 mb-3">Prebook Now & Save 30%</h2>
-        <p class="mb-4">Secure your BitesPOS today with a refundable RM2,000 deposit and lock in exclusive early pricing.</p>
-        
-        <div class="d-flex align-items-center mb-3">
-          <div class="me-3">
-            <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-              <i class="bi bi-check-lg"></i>
-            </div>
-          </div>
-          <div>
-            <h5 class="mb-0">Limited Spots Available</h5>
-            <small class="text-muted">Only 12 of 50 remaining</small>
-          </div>
-        </div>
-        
-        <div class="d-flex align-items-center">
-          <div class="me-3">
-            <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-              <i class="bi bi-check-lg"></i>
-            </div>
-          </div>
-          <div>
-            <h5 class="mb-0">100% Refundable</h5>
-            <small class="text-muted">No risk commitment</small>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-7">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-4">
-            <form class="row g-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your name" required>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
-              </div>
-              <div class="col-md-6">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="tel" class="form-control" id="phone" placeholder="+60 12 345 6789" required>
-              </div>
-              <div class="col-md-6">
-                <label for="business" class="form-label">Business Name</label>
-                <input type="text" class="form-control" id="business" placeholder="Your restaurant">
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-2">
-                  <i class="bi bi-lock-fill me-2"></i> Prebook Now (RM2,000 Deposit)
-                </button>
-                <small class="text-muted d-block mt-2 text-center">
-                  <i class="bi bi-shield-check text-success me-1"></i> Refundable deposit - No credit card needed
-                </small>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Ultra-Compact Prebooking Section -->
-<section class="py-4 py-md-5 bg-primary-light position-relative">
-  <div class="container position-relative" style="z-index: 2;">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card border-0 shadow-sm overflow-hidden">
-          <div class="row g-0">
-            <div class="col-md-5 bg-primary text-white p-4 p-md-5 d-flex flex-column">
-              <div>
-                <span class="badge bg-warning text-dark mb-3">✨ EARLY ACCESS</span>
-                <h3 class="h4 mb-3">Reserve Your Spot</h3>
-                <p class="small mb-4">Prebook today with a refundable RM2,000 deposit and get:</p>
-                <ul class="list-unstyled small mb-4">
-                  <li class="mb-2 d-flex align-items-start">
-                    <i class="bi bi-check-circle-fill me-2 mt-1"></i>
-                    <span>Priority installation</span>
-                  </li>
-                  <li class="mb-2 d-flex align-items-start">
-                    <i class="bi bi-check-circle-fill me-2 mt-1"></i>
-                    <span>Exclusive pricing</span>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <i class="bi bi-check-circle-fill me-2 mt-1"></i>
-                    <span>Free setup support</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-auto">
-                <div class="d-flex align-items-center bg-primary-dark p-2 rounded">
-                  <i class="bi bi-shield-lock fs-5 me-2"></i>
-                  <small>Your information is secure</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-7 bg-white p-4 p-md-5">
-              <form class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <label for="prebookName" class="form-label small fw-bold">Full Name</label>
-                  <input type="text" class="form-control form-control-sm" id="prebookName" required>
-                </div>
-                <div class="mb-3">
-                  <label for="prebookEmail" class="form-label small fw-bold">Email Address</label>
-                  <input type="email" class="form-control form-control-sm" id="prebookEmail" required>
-                </div>
-                <div class="mb-4">
-                  <label for="prebookPhone" class="form-label small fw-bold">Phone Number</label>
-                  <input type="tel" class="form-control form-control-sm" id="prebookPhone" required>
-                </div>
-                <button class="btn btn-primary w-100 py-2" type="submit">
-                  <i class="bi bi-send-fill me-2"></i> Prebook Now
-                </button>
-                <p class="small text-muted mt-2 mb-0 text-center">
-                  <i class="bi bi-arrow-counterclockwise me-1"></i> Fully refundable deposit
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Decorative element -->
-  <div class="position-absolute bottom-0 end-0" style="z-index: 1; opacity: 0.1;">
-    <svg width="150" height="150" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100 0C44.77 0 0 44.77 0 100C0 155.23 44.77 200 100 200C155.23 200 200 155.23 200 100C200 44.77 155.23 0 100 0Z" fill="var(--primary)"/>
+<!-- Enhanced Prebooking Section with Early Bird Offer -->
+<section class="py-5 py-md-7 bg-light position-relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="position-absolute top-0 end-0 w-100 h-100 bg-primary-opacity-10" style="clip-path: polygon(100% 0, 100% 100%, 0 100%); z-index: 0;"></div>
+  <div class="position-absolute start-0 bottom-0" style="z-index: 0;">
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="98" stroke="var(--primary)" stroke-width="2" stroke-dasharray="8 8"/>
     </svg>
   </div>
-</section>
 
-
-
-
-
-
-
-<!-- Premium Prebooking Section -->
-<section class="py-5 position-relative" style="background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);">
-  <!-- Early Bird Ribbon -->
-  <div class="early-bird-ribbon bg-warning text-dark">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-center py-2">
-        <i class="bi bi-lightning-fill me-2"></i>
-        <strong>EARLY BIRD OFFER:</strong> 
-        <span class="ms-2">First 50 signups get 30% discount + free setup</span>
-        <div class="ms-3 badge bg-dark text-white">Only 12 spots left</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container py-4">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="card border-0 shadow-lg overflow-hidden" style="border-radius: 12px;">
-          <div class="row g-0">
-            <!-- Benefits Panel -->
-            <div class="col-md-5 bg-primary text-white p-4 p-lg-5 position-relative">
-              <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==')"></div>
-              
-              <div class="position-relative z-index-1">
-                <h3 class="h2 mb-4">Why Prebook Now?</h3>
-                <ul class="list-unstyled mb-4">
-                  <li class="mb-3 d-flex align-items-start">
-                    <div class="bg-white text-primary rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
-                      <i class="bi bi-check-lg fs-6"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h5 class="mb-0">RM2,000 Discount</h5>
-                      <p class="small opacity-75 mb-0">Lock in special early pricing</p>
-                    </div>
-                  </li>
-                  <li class="mb-3 d-flex align-items-start">
-                    <div class="bg-white text-primary rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
-                      <i class="bi bi-check-lg fs-6"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h5 class="mb-0">Priority Installation</h5>
-                      <p class="small opacity-75 mb-0">Be first in line when we launch</p>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <div class="bg-white text-primary rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
-                      <i class="bi bi-check-lg fs-6"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h5 class="mb-0">Free Training Session</h5>
-                      <p class="small opacity-75 mb-0">Personalized onboarding</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Compact Form -->
-            <div class="col-md-7 bg-white p-4 p-lg-5">
-              <div class="text-center mb-4">
-                <h3 class="h4 mb-2">Prebook in 30 Seconds</h3>
-                <p class="small text-muted">Just 3 fields to secure your early bird benefits</p>
-              </div>
-              
-              <form class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <label for="prebookName" class="form-label small fw-bold text-uppercase">Full Name</label>
-                  <input type="text" class="form-control" id="prebookName" placeholder="Your name" required>
-                </div>
-                <div class="mb-3">
-                  <label for="prebookEmail" class="form-label small fw-bold text-uppercase">Email</label>
-                  <input type="email" class="form-control" id="prebookEmail" placeholder="your@email.com" required>
-                </div>
-                <div class="mb-4">
-                  <label for="prebookPhone" class="form-label small fw-bold text-uppercase">Phone</label>
-                  <input type="tel" class="form-control" id="prebookPhone" placeholder="+60 12 345 6789" required>
-                </div>
-                
-                <button type="submit" class="btn btn-primary w-100 py-3 fw-bold hover-grow">
-                  <i class="bi bi-send-fill me-2"></i> Reserve My Spot (RM2,000 Deposit)
-                </button>
-                
-                <div class="mt-3 text-center">
-                  <small class="text-muted d-flex align-items-center justify-content-center">
-                    <i class="bi bi-arrow-counterclockwise me-2 text-success"></i>
-                    <span>100% refundable deposit - No credit card needed</span>
-                  </small>
-                </div>
-              </form>
-            </div>
-          </div>
+  <div class="container position-relative" style="z-index: 1;">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark fs-6 mb-3 animate-pulse">🔥 LIMITED TIME OFFER</span>
+      <h2 class="display-5 fw-bold mb-3">Early Access Prebooking Now Live!
+</h2>
+      <div class="d-flex justify-content-center mb-4">
+        <div class="countdown-box bg-primary text-white rounded-3 p-2 mx-1 hover-grow">
+          <div class="fs-3 fw-bold" id="countdown-hours">23</div>
+          <div class="small">HOURS</div>
+        </div>
+        <div class="countdown-box bg-primary text-white rounded-3 p-2 mx-1 hover-grow">
+          <div class="fs-3 fw-bold" id="countdown-minutes">59</div>
+          <div class="small">MINUTES</div>
+        </div>
+        <div class="countdown-box bg-primary text-white rounded-3 p-2 mx-1 hover-grow">
+          <div class="fs-3 fw-bold" id="countdown-seconds">59</div>
+          <div class="small">SECONDS</div>
         </div>
       </div>
+      <p class="lead mx-auto" style="max-width: 700px;">Prebook now and  <span class="text-primary fw-bold">unlock exclusive perks</span> that are available only before launch!</p>
     </div>
-  </div>
-</section>
 
+    <div class="row g-4 mt-2">
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-scale">
+          <div class="card-body p-4 p-md-5">
+            <div class="d-flex align-items-center mb-4">
+              <div class="bg-warning rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                <i class="bi bi-star-fill text-dark fs-5"></i>
+              </div>
+              <div class="ms-3">
+                <h3 class="h4 mb-0">Early Access Package
+</h3>
+                <p class="text-muted mb-0">Only for the first 50 restaurants</p>
+              </div>
+            </div>
 
-
-
-<!-- Design 1: Floating Card Style -->
-<section class="py-5 position-relative" style="background: radial-gradient(circle at 10% 20%, rgba(240,247,255,1) 0%, rgba(255,255,255,1) 100%);">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="position-relative">
-          <!-- Floating card effect -->
-          <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-            <div class="card-body p-0">
-              <div class="row g-0">
-                <div class="col-md-6 bg-white p-4 p-lg-5">
-                  <h3 class="h4 mb-4">Early Bird Prebooking</h3>
-                  <form>
-                    <div class="floating-input mb-3">
-                      <input type="text" id="floatName" class="form-control" placeholder=" " required>
-                      <label for="floatName">Full Name</label>
-                    </div>
-                    <div class="floating-input mb-3">
-                      <input type="email" id="floatEmail" class="form-control" placeholder=" " required>
-                      <label for="floatEmail">Email Address</label>
-                    </div>
-                    <div class="floating-input mb-4">
-                      <input type="tel" id="floatPhone" class="form-control" placeholder=" " required>
-                      <label for="floatPhone">Phone Number</label>
-                    </div>
-                    <button class="btn btn-primary w-100 py-3">
-                      <i class="bi bi-arrow-right me-2"></i> Reserve Now
-                    </button>
-                  </form>
-                </div>
-                <div class="col-md-6 bg-primary text-white p-4 p-lg-5 position-relative">
-                  <div class="position-absolute top-0 end-0 p-3">
-                    <span class="badge bg-warning text-dark">LIMITED OFFER</span>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="d-flex hover-lift">
+                  <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="bi bi-check-lg text-primary"></i>
                   </div>
-                  <div class="h-100 d-flex flex-column justify-content-center">
-                    <h3 class="h2 mb-4">Save 30%</h3>
-                    <ul class="list-unstyled mb-4">
-                      <li class="mb-3 d-flex">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        <span>Priority installation</span>
-                      </li>
-                      <li class="mb-3 d-flex">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        <span>Free setup support</span>
-                      </li>
-                      <li class="d-flex">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        <span>Refundable deposit</span>
-                      </li>
-                    </ul>
-                    <div class="mt-auto pt-3">
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%;"></div>
-                      </div>
-                      <small class="text-white-50">35/50 spots claimed</small>
-                    </div>
+                  <div class="ms-3">
+                    <h5 class="mb-1">Exclusive 5% Discount
+</h5>
+                    <p class="text-secondary small mb-0">Save big on the complete System</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex hover-lift">
+                  <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="bi bi-check-lg text-primary"></i>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-1">Complimentary Starter Kit</h5>
+                    <p class="text-secondary small mb-0">High-value bundle included</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex hover-lift">
+                  <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="bi bi-check-lg text-primary"></i>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-1">Priority Service</h5>
+                    <p class="text-secondary small mb-0">Jump the queue during launch</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex hover-lift">
+                  <div class="bg-primary-subtle rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                    <i class="bi bi-check-lg text-primary"></i>
+                  </div>
+                  <div class="ms-3">
+                    <h5 class="mb-1">Limited Availability</h5>
+                    <p class="text-secondary small mb-0">Only a few spots left!</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <!-- Decorative elements -->
-          <div class="position-absolute top-0 start-0 translate-middle" style="z-index: -1;">
-            <div class="bg-primary rounded-circle" style="width: 120px; height: 120px; opacity: 0.1;"></div>
-          </div>
-          <div class="position-absolute bottom-0 end-0 translate-middle" style="z-index: -1;">
-            <div class="bg-primary rounded-circle" style="width: 80px; height: 80px; opacity: 0.1;"></div>
+
+            <div class="mt-5 pt-3">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="text-muted">Prebooked:</span>
+                <div class="d-flex align-items-center">
+                  <div class="progress flex-grow-1" style="height: 8px; width: 200px;">
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="ms-2 fw-bold">32/50</span>
+                </div>
+              </div>
+              <div class="alert alert-warning fade show mb-0 hover-lift" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> Hurry! Only 18 early access slots remain!
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- Design 2: Minimalist Centered Style -->
-<section class="py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-6 text-center mb-5">
-        <span class="badge bg-primary text-white mb-3">EXCLUSIVE OFFER</span>
-        <h2 class="mb-3">Prebook BitesPOS Today</h2>
-        <p class="text-muted">Secure your spot with a refundable RM2,000 deposit and enjoy early bird benefits</p>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
+      
       <div class="col-lg-5">
-        <div class="card border-0 shadow-sm p-4 p-lg-5">
-          <form>
-            <div class="mb-4">
-              <input type="text" class="form-control form-control-lg border-bottom" placeholder="Full Name" required style="border: none; border-radius: 0; border-bottom: 1px solid #dee2e6 !important; padding-left: 0;">
-            </div>
-            <div class="mb-4">
-              <input type="email" class="form-control form-control-lg border-bottom" placeholder="Email Address" required style="border: none; border-radius: 0; border-bottom: 1px solid #dee2e6 !important; padding-left: 0;">
-            </div>
-            <div class="mb-4">
-              <input type="tel" class="form-control form-control-lg border-bottom" placeholder="Phone Number" required style="border: none; border-radius: 0; border-bottom: 1px solid #dee2e6 !important; padding-left: 0;">
-            </div>
-            
-            <button class="btn btn-primary w-100 py-3 mb-3">
-              Reserve My Spot
-            </button>
-            
-            <div class="d-flex align-items-center justify-content-center">
-              <i class="bi bi-shield-check text-success me-2"></i>
-              <small class="text-muted">100% refundable deposit</small>
-            </div>
-          </form>
-        </div>
-      </div>
-      
-      <div class="col-lg-5 mt-4 mt-lg-0">
-        <div class="bg-primary-light p-4 p-lg-5 h-100 rounded-3">
-          <h4 class="mb-4">Early Bird Benefits</h4>
-          <div class="d-flex mb-3">
-            <div class="bg-primary text-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">
-              <i class="bi bi-1"></i>
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0">30% Discount</h6>
-              <small class="text-muted">Save RM2,000 on setup</small>
-            </div>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-scale">
+          <div class="card-header bg-primary text-white py-3">
+            <h4 class="mb-0 text-center">Claim Your Early Access Advantage</h4>
           </div>
-          <div class="d-flex mb-3">
-            <div class="bg-primary text-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">
-              <i class="bi bi-2"></i>
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0">Priority Support</h6>
-              <small class="text-muted">Dedicated account manager</small>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div class="bg-primary text-white rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 24px; height: 24px;">
-              <i class="bi bi-3"></i>
-            </div>
-            <div class="ms-3">
-              <h6 class="mb-0">Free Training</h6>
-              <small class="text-muted">Personalized onboarding</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</style>
-
-
-
-
-<!-- Design 3: Modern Card Stack Style -->
-<section class="py-5 position-relative" style="background-color: #f8fafc;">
-  <div class="container position-relative">
-    <!-- Decorative elements -->
-    <div class="position-absolute top-0 end-0" style="z-index: 0;">
-      <div class="bg-primary rounded-circle" style="width: 200px; height: 200px; opacity: 0.03;"></div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <!-- Stacked card effect -->
-        <div class="position-relative">
-          <!-- Back card -->
-          <div class="card border-0 shadow-sm position-absolute top-0 start-0 w-100 h-100" style="transform: rotate(-2deg); z-index: 1; background-color: #f0f7ff;"></div>
-          
-          <!-- Front card -->
-          <div class="card border-0 shadow-lg position-relative rounded-4 overflow-hidden" style="z-index: 2;">
-            <div class="card-body p-0">
-              <div class="row g-0">
-                <div class="col-md-6 bg-white p-4 p-lg-5">
-                  <h3 class="h4 mb-4">Join the Waitlist</h3>
-                  <p class="text-muted mb-4">Be the first to get access to BitesPOS with special early bird pricing</p>
-                  
-                  <form>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-person"></i></span>
-                      <input type="text" class="form-control border-start-0" placeholder="Full Name" required>
-                    </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-envelope"></i></span>
-                      <input type="email" class="form-control border-start-0" placeholder="Email Address" required>
-                    </div>
-                    <div class="input-group mb-4">
-                      <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-phone"></i></span>
-                      <input type="tel" class="form-control border-start-0" placeholder="Phone Number" required>
-                    </div>
-                    
-                    <button class="btn btn-primary w-100 py-3 mb-3">
-                      <i class="bi bi-send me-2"></i> Prebook Now
-                    </button>
-                    
-                    <div class="text-center">
-                      <small class="text-muted d-flex align-items-center justify-content-center">
-                        <i class="bi bi-lock-fill me-2 text-success"></i>
-                        Secure form - 100% refundable
-                      </small>
-                    </div>
-                  </form>
-                </div>
-                
-                <div class="col-md-6 bg-primary text-white p-4 p-lg-5">
-                  <div class="d-flex align-items-center mb-4">
-                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
-                      <i class="bi bi-gem"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h4 class="mb-0">Early Access</h4>
-                      <small>Exclusive benefits</small>
-                    </div>
+          <div class="card-body p-4 p-md-5">
+            <form id="prebookForm" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control hover-lift" id="name" placeholder="Your name" required>
+                <div class="invalid-feedback">Please enter your name</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control hover-lift" id="email" placeholder="your@email.com" required>
+                <div class="invalid-feedback">Please enter a valid email</div>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control hover-lift" id="phone" placeholder="+60 12 345 6789" required>
+                <div class="invalid-feedback">Please enter your phone number</div>
+              </div>
+              <div class="mb-4">
+                <label for="restaurant" class="form-label">Restaurant Name</label>
+                <input type="text" class="form-control hover-lift" id="restaurant" placeholder="Your restaurant name">
+              </div>
+              
+              <div class="bg-primary-subtle p-3 rounded-3 mb-4 hover-lift">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="mb-0">Early Access Deal</h6>
+                    <small class="text-muted">One-time payment</small>
                   </div>
-                  
-                  <ul class="list-unstyled mb-4">
-                    <li class="mb-3 pb-2 border-bottom border-white-10">
-                      <div class="d-flex align-items-center">
-                        <div class="bg-white-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 24px; height: 24px;">
-                          <i class="bi bi-check"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="mb-0">RM2,000 Discount</h6>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="mb-3 pb-2 border-bottom border-white-10">
-                      <div class="d-flex align-items-center">
-                        <div class="bg-white-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 24px; height: 24px;">
-                          <i class="bi bi-check"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="mb-0">Free Hardware Kit</h6>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="pb-2 border-bottom border-white-10">
-                      <div class="d-flex align-items-center">
-                        <div class="bg-white-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 24px; height: 24px;">
-                          <i class="bi bi-check"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="mb-0">VIP Support Line</h6>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  
-                  <div class="mt-4 pt-2">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                      <small class="opacity-75">Spots remaining:</small>
-                      <small class="fw-bold">12/50</small>
-                    </div>
-                    <div class="progress" style="height: 6px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 76%;"></div>
-                    </div>
+                  <div class="text-end">
+                    <div class="text-decoration-line-through text-muted small"></div>
+                    <div class="h4 mb-0 text-primary"></div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- Apple-Inspired Prebooking Section -->
-<section class="prebook-section py-6 position-relative overflow-hidden">
-  <div class="container position-relative">
-    <!-- Animated background elements -->
-    <div class="position-absolute bg-blob-1"></div>
-    <div class="position-absolute bg-blob-2"></div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <!-- Main card with floating effect -->
-        <div class="prebook-card">
-          <div class="row g-0">
-            <!-- Form column -->
-            <div class="col-md-6 form-column">
-              <div class="p-4 p-lg-5">
-                <div class="d-flex align-items-center mb-4">
-                  <div class="icon-badge bg-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                  </div>
-                  <h3 class="mb-0 ms-3">Early Access</h3>
-                </div>
-                
-                <form class="prebook-form">
-                  <div class="form-group">
-                    <input type="text" id="prebookName" required>
-                    <label for="prebookName">Full Name</label>
-                    <div class="underline"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" id="prebookEmail" required>
-                    <label for="prebookEmail">Email Address</label>
-                    <div class="underline"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" id="prebookPhone" required>
-                    <label for="prebookPhone">Phone Number</label>
-                    <div class="underline"></div>
-                  </div>
-                  
-                  <button type="submit" class="submit-btn">
-                    <span>Join Waitlist</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-            
-            <!-- Benefits column -->
-            <div class="col-md-6 benefits-column">
-              <div class="p-4 p-lg-5 h-100">
-                <div class="d-flex align-items-center mb-4">
-                  <div class="icon-badge bg-warning">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                  </div>
-                  <h3 class="mb-0 ms-3">Exclusive Benefits</h3>
-                </div>
-                
-                <ul class="benefits-list">
-                  <li class="benefit-item">
-                    <div class="benefit-content">
-                      <h4>Priority Installation</h4>
-                      <p>Be first in line when we launch</p>
-                    </div>
-                    <div class="benefit-number">01</div>
-                  </li>
-                  <li class="benefit-item">
-                    <div class="benefit-content">
-                      <h4>30% Discount</h4>
-                      <p>Save RM2,000 on setup</p>
-                    </div>
-                    <div class="benefit-number">02</div>
-                  </li>
-                  <li class="benefit-item">
-                    <div class="benefit-content">
-                      <h4>VIP Support</h4>
-                      <p>Dedicated account manager</p>
-                    </div>
-                    <div class="benefit-number">03</div>
-                  </li>
-                </ul>
-                
-                <div class="spots-remaining mt-auto pt-4">
-                  <div class="d-flex justify-content-between mb-2">
-                    <small>Spots remaining</small>
-                    <small class="fw-bold">12/50</small>
-                  </div>
-                  <div class="progress-track">
-                    <div class="progress-bar"></div>
-                  </div>
+              
+              <button type="submit" class="btn btn-primary w-100 py-3 fw-bold hover-grow hover-lift">
+                <i class="bi bi-lock-fill me-2"></i> Pre Book Now
+              </button>
+              
+              <div class="mt-3 text-center">
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="bi bi-shield-check text-success me-2"></i>
+                  <small class="text-muted"> No credit card required</small>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -1393,6 +863,6 @@
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
   </body>
 </html>
